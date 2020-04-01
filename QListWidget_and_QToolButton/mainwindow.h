@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QListWidget>
+#include <QWidget>
 
 namespace Ui {
 class MainWindow;
@@ -17,9 +18,9 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_actListlni_triggered();
+    void on_actListIni_triggered();
 
-    void on_actListlnsert_triggered();
+    void on_actListInsert_triggered();
 
     void on_actListDelete_triggered();
 
@@ -32,6 +33,12 @@ private slots:
     void on_actSelInvs_triggered();
 
     void on_listWidget_currentItemChanged(QListWidgetItem *current, QListWidgetItem *previous);
+
+    void setActionsForButton();
+
+    void createSelectionPopMenu();
+
+    void on_listWidget_customContextMenuRequested(const QPoint &pos);
 
 private:
     Ui::MainWindow *ui;
