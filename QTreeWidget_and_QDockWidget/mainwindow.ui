@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>591</width>
+    <height>450</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QScrollArea" name="scrollArea">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>276</width>
+      <height>276</height>
+     </rect>
+    </property>
+    <property name="widgetResizable">
+     <bool>true</bool>
+    </property>
+    <widget class="QWidget" name="scrollAreaWidgetContents">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>274</width>
+       <height>274</height>
+      </rect>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>favicon3.ico</pixmap>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>591</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextBesideIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actAddFolder"/>
+   <addaction name="actAddFiles"/>
+   <addaction name="actDeleteItem"/>
+   <addaction name="actScanItems"/>
+   <addaction name="actZoomIn"/>
+   <addaction name="actZoomOut"/>
+   <addaction name="actZoomISize"/>
+   <addaction name="actZoomFitW"/>
+   <addaction name="actZoomFitH"/>
+   <addaction name="actDockVisible"/>
+   <addaction name="actDockFloat"/>
+   <addaction name="actQuit"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QDockWidget" name="dockWidget">
+   <property name="allowedAreas">
+    <set>Qt::AllDockWidgetAreas</set>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QTreeWidget" name="treeWidget">
+       <column>
+        <property name="text">
+         <string notr="true">节点</string>
+        </property>
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>节点类型</string>
+        </property>
+        <property name="font">
+         <font>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+       </column>
+       <item>
+        <property name="text">
+         <string>图片文件</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>favicon4.ico</normaloff>favicon4.ico</iconset>
+        </property>
+        <item>
+         <property name="text">
+          <string>分组1</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>favicon4.ico</normaloff>favicon4.ico</iconset>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <item>
+          <property name="text">
+           <string>1</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>favicon0.ico</normaloff>favicon0.ico</iconset>
+          </property>
+         </item>
+        </item>
+        <item>
+         <property name="text">
+          <string>分组2</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>favicon4.ico</normaloff>favicon4.ico</iconset>
+         </property>
+         <item>
+          <property name="text">
+           <string>2</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normaloff>favicon1.ico</normaloff>favicon1.ico</iconset>
+          </property>
+         </item>
+        </item>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="actAddFolder">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>favicon4.ico</normaloff>favicon4.ico</iconset>
+   </property>
+   <property name="text">
+    <string>添加目录</string>
+   </property>
+   <property name="toolTip">
+    <string>添加目录</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
+   </property>
+  </action>
+  <action name="actAddFiles">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>favicon18.ico</normaloff>favicon18.ico</iconset>
+   </property>
+   <property name="text">
+    <string>添加文件</string>
+   </property>
+   <property name="toolTip">
+    <string>添加文件</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actZoomIn">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>favicon22.ico</normaloff>favicon22.ico</iconset>
+   </property>
+   <property name="text">
+    <string>放大</string>
+   </property>
+   <property name="toolTip">
+    <string>放大</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I</string>
+   </property>
+  </action>
+  <action name="actZoomOut">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>favicon19.ico</normaloff>favicon19.ico</iconset>
+   </property>
+   <property name="text">
+    <string>缩小</string>
+   </property>
+   <property name="toolTip">
+    <string>缩小</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actZoomISize">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>favicon13.ico</normaloff>favicon13.ico</iconset>
+   </property>
+   <property name="text">
+    <string>实际大小</string>
+   </property>
+   <property name="toolTip">
+    <string>图片实际大小显示</string>
+   </property>
+  </action>
+  <action name="actZoomFitW">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>favicon14.ico</normaloff>favicon14.ico</iconset>
+   </property>
+   <property name="text">
+    <string>适合宽度</string>
+   </property>
+   <property name="toolTip">
+    <string>适合宽度显示</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+W</string>
+   </property>
+  </action>
+  <action name="actDeleteItem">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>favicon10.ico</normaloff>favicon10.ico</iconset>
+   </property>
+   <property name="text">
+    <string>删除节点</string>
+   </property>
+   <property name="toolTip">
+    <string>删除节点</string>
+   </property>
+   <property name="shortcut">
+    <string>Del</string>
+   </property>
+  </action>
+  <action name="actQuit">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>favicon17.ico</normaloff>favicon17.ico</iconset>
+   </property>
+   <property name="text">
+    <string>退出</string>
+   </property>
+   <property name="toolTip">
+    <string>退出本系统</string>
+   </property>
+   <property name="shortcut">
+    <string>Esc</string>
+   </property>
+  </action>
+  <action name="actZoomFitH">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>favicon20.ico</normaloff>favicon20.ico</iconset>
+   </property>
+   <property name="text">
+    <string>适合高度</string>
+   </property>
+   <property name="toolTip">
+    <string>适合高度</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+H</string>
+   </property>
+  </action>
+  <action name="actScanItems">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>favicon23.ico</normaloff>favicon23.ico</iconset>
+   </property>
+   <property name="text">
+    <string>遍历节点</string>
+   </property>
+   <property name="toolTip">
+    <string>遍历节点</string>
+   </property>
+  </action>
+  <action name="actDockVisible">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>favicon25.ico</normaloff>favicon25.ico</iconset>
+   </property>
+   <property name="text">
+    <string>窗体可见</string>
+   </property>
+   <property name="toolTip">
+    <string>窗体可见</string>
+   </property>
+  </action>
+  <action name="actDockFloat">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>favicon11.ico</normaloff>favicon11.ico</iconset>
+   </property>
+   <property name="text">
+    <string>窗体浮动</string>
+   </property>
+   <property name="toolTip">
+    <string>窗体浮动</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
