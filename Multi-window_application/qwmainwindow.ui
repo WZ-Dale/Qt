@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QWMainWindow</class>
+ <widget class="QMainWindow" name="QWMainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>619</width>
+    <height>380</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>QWMainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>20</y>
+      <width>491</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <property name="mouseTracking">
+      <bool>false</bool>
+     </property>
+     <property name="tabletTracking">
+      <bool>false</bool>
+     </property>
+     <attribute name="title">
+      <string>Tab 1</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Tab 2</string>
+     </attribute>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>619</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actWidgetInsite"/>
+   <addaction name="actWidget"/>
+   <addaction name="separator"/>
+   <addaction name="actWindowInsite"/>
+   <addaction name="actWindow"/>
+   <addaction name="separator"/>
+   <addaction name="actExit"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actWidgetInsite">
+   <property name="icon">
+    <iconset>
+     <normaloff>favicon0.ico</normaloff>favicon0.ico</iconset>
+   </property>
+   <property name="text">
+    <string>嵌入式Widget</string>
+   </property>
+   <property name="toolTip">
+    <string>嵌入式 Widget</string>
+   </property>
+  </action>
+  <action name="actWidget">
+   <property name="icon">
+    <iconset>
+     <normaloff>favicon1.ico</normaloff>favicon1.ico</iconset>
+   </property>
+   <property name="text">
+    <string>独立Widget窗口</string>
+   </property>
+   <property name="toolTip">
+    <string>独立 Widget 窗口</string>
+   </property>
+  </action>
+  <action name="actWindowInsite">
+   <property name="icon">
+    <iconset>
+     <normaloff>favicon2.ico</normaloff>favicon2.ico</iconset>
+   </property>
+   <property name="text">
+    <string>嵌入式MainWindow</string>
+   </property>
+   <property name="toolTip">
+    <string>嵌入式 MainWindow</string>
+   </property>
+  </action>
+  <action name="actWindow">
+   <property name="icon">
+    <iconset>
+     <normaloff>favicon3.ico</normaloff>favicon3.ico</iconset>
+   </property>
+   <property name="text">
+    <string>独立MainWindow窗口</string>
+   </property>
+   <property name="toolTip">
+    <string>独立 MainWindow 窗口</string>
+   </property>
+  </action>
+  <action name="actExit">
+   <property name="icon">
+    <iconset>
+     <normaloff>favicon17.ico</normaloff>favicon17.ico</iconset>
+   </property>
+   <property name="text">
+    <string>退出</string>
+   </property>
+   <property name="toolTip">
+    <string>退出程序</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actExit</sender>
+   <signal>triggered()</signal>
+   <receiver>QWMainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>520</x>
+     <y>316</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
