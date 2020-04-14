@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>621</width>
+    <height>378</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Tab 1</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QPlainTextEdit" name="textEditDevice"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Tab 2</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QPlainTextEdit" name="textEditStream"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>621</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextUnderIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actOpen_IODevice"/>
+   <addaction name="actSave_IODevice"/>
+   <addaction name="separator"/>
+   <addaction name="actOpen_QTextStream"/>
+   <addaction name="actSave_QTextStream"/>
+   <addaction name="separator"/>
+   <addaction name="actExit"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actOpen_IODevice">
+   <property name="icon">
+    <iconset>
+     <normaloff>favicon0.ico</normaloff>favicon0.ico</iconset>
+   </property>
+   <property name="text">
+    <string>QFile直接打开</string>
+   </property>
+   <property name="toolTip">
+    <string>QFile直接打开</string>
+   </property>
+  </action>
+  <action name="actSave_IODevice">
+   <property name="icon">
+    <iconset>
+     <normaloff>favicon1.ico</normaloff>favicon1.ico</iconset>
+   </property>
+   <property name="text">
+    <string>QFile 另存</string>
+   </property>
+   <property name="toolTip">
+    <string>QFile 另存</string>
+   </property>
+  </action>
+  <action name="actOpen_QTextStream">
+   <property name="icon">
+    <iconset>
+     <normaloff>favicon2.ico</normaloff>favicon2.ico</iconset>
+   </property>
+   <property name="text">
+    <string>QTextStream直接打开</string>
+   </property>
+   <property name="toolTip">
+    <string>QTextStream直接打开</string>
+   </property>
+  </action>
+  <action name="actSave_QTextStream">
+   <property name="icon">
+    <iconset>
+     <normaloff>favicon3.ico</normaloff>favicon3.ico</iconset>
+   </property>
+   <property name="text">
+    <string>QTextStream另存</string>
+   </property>
+   <property name="toolTip">
+    <string>QTextStream另存</string>
+   </property>
+  </action>
+  <action name="actExit">
+   <property name="icon">
+    <iconset>
+     <normaloff>favicon7.ico</normaloff>favicon7.ico</iconset>
+   </property>
+   <property name="text">
+    <string>退出</string>
+   </property>
+   <property name="toolTip">
+    <string>退出</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actExit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>310</x>
+     <y>188</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
